@@ -1,1 +1,1 @@
-# syndrome the top of your dome
+# syndrome on top of your dome
