@@ -3,6 +3,8 @@ import process from "process";
 import { sassPlugin } from "esbuild-sass-plugin";
 import postcss from 'postcss';
 import autoprefixer from 'autoprefixer';
+// import glob from 'glob-all';
+// import purgecssPlugin2 from 'esbuild-plugin-purgecss-2';
 import builtins from 'builtin-modules'
 
 // const banner =
@@ -21,6 +23,7 @@ esbuild.build({
         },
     }),
 ],
+
 	external: [
 		'obsidian',
 		'electron',
