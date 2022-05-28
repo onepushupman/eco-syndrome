@@ -1,0 +1,682 @@
+/*────────────────────────────────────
+++++++++++++Workspace++++++++++++++++
+────────────────────────────────────*/
+
+/*────────────────────────────────────
+            Title Bar
+────────────────────────────────────*/
+
+.titlebar-button-container.mod-left,
+.titlebar-text,
+.titlebar-button-container.mod-right,
+.titlebar-left {
+  margin-top: var(--scale-0-0);
+}
+
+/*─────────Titlebar──────────*/
+
+.titlebar {
+  background: var(--color-black);
+}
+
+.titlebar-text {
+  color: var(--color-gray-40);
+}
+
+.titlebar-button {
+  color: var(--color-gray-40);
+  display: inline-block;
+  -webkit-app-region: no-drag;
+}
+
+.titlebar-button.mod-back:hover,
+.titlebar-button.mod-forward:hover,
+.titlebar-button.mod-minimize:hover,
+.titlebar-button.mod-maximize:hover {
+  color: var(--color-cyan-500);
+  background: var(--color-gray-100);
+}
+
+.titlebar-button.mod-close:hover {
+  color: var(--color-white);
+  background: var(--color-magenta-900);
+}
+
+/*────────────────────────────────────
+        Side Dock Ribbon
+────────────────────────────────────*/
+
+.side-dock-ribbon {
+  flex: 0 0 var(--scale-2-18);
+  display: flex;
+  flex-direction: column;
+}
+
+.workspace-ribbon {
+  overflow: hidden;
+  width: var(--scale-8-5);
+  transition: var(--duration-fast-1) var(--motion-smooth);
+}
+
+.workspace-ribbon.is-collapsed,
+.workspace-ribbon.is-collapsed.side-dock-ribbon-action {
+  transition: var(--duration-fast-1) var(--motion-smooth);
+}
+
+.workspace-ribbon.mod-left.is-collapsed {
+  border-right: 1px solid transparent;
+}
+
+.workspace-ribbon.mod-right.is-collapsed {
+  border-left: 1px solid transparent;
+}
+
+/* Side Dock Ribbon Icons Sizing */
+
+.side-dock-ribbon-action {
+  padding: var(--scale-0-0) var(--scale-0-0) var(--scale-2-5) var(--scale-0-0);
+}
+
+.workspace-ribbon.side-dock-ribbon .workspace-ribbon-collapse-btn {
+  margin-top: var(--scale-2-3);
+  padding: var(--scale-2-4) var(--scale-2-5);
+}
+
+.workspace-ribbon.side-dock-ribbon .side-dock-settings {
+  margin-bottom: var(--scale-0-0);
+}
+
+/*─────────Side Dock Ribbon Colors──────────*/
+
+.workspace-ribbon {
+  background: var(--color-black);
+}
+
+.workspace-ribbon.mod-left {
+  border-right: 1px solid var(--color-purple-700);
+}
+
+.workspace-ribbon.mod-right {
+  border-left: 1px solid var(--color-green-920);
+}
+
+.workspace-ribbon .side-dock-ribbon-action:hover,
+.workspace-ribbon-collapse-btn:hover[aria-label-position="right"] {
+  color: var(--color-purple-700);
+}
+
+.workspace-ribbon-collapse-btn:hover[aria-label-position="left"] {
+  color: var(--color-green-920);
+}
+
+.workspace-ribbon.is-collapsed {
+  background: var(--color-black);
+}
+
+.workspace-ribbon.is-collapsed .side-dock-ribbon-action {
+  color: var(--color-gray-60);
+}
+
+.workspace-ribbon.is-collapsed .side-dock-ribbon-action:hover {
+  color: var(--color-purple-700);
+}
+
+/*────────────────────────────────────
+            Tab Header
+────────────────────────────────────*/
+
+/*─────────Tab Header Icons──────────*/
+
+.workspace-tab-header-container {
+  height: unset;
+  padding: var(--scale-0-0) var(--scale-0-0) var(--scale-0-0) var(--scale-0-0);
+  margin: var(--scale-2-2) var(--scale-0-0) var(--scale-0-0) var(--scale-0-0);
+}
+
+.workspace-tab-header {
+  /*
+Applied for All
+Tab Header Icon Container
+*/
+  height: var(--scale-2-18);
+  padding: var(--scale-2-2) var(--scale-2-2) var(--scale-2-2) var(--scale-2-2);
+  margin: var(--scale-0-0) var(--scale-2-1) var(--scale-0-0) var(--scale-2-1);
+  border-radius: var(--scale-0-0);
+}
+
+.workspace-tab-header-inner,
+.workspace-tab-header-inner-icon {
+  padding: var(--scale-2-1) var(--scale-2-2) var(--scale-2-2) var(--scale-2-2);
+}
+
+.workspace-tab-container-before {
+  margin: calc(-1 * var(--scale-2-4));
+}
+
+.workspace-tab-header.is-active {
+  border-top-left-radius: var(--scale-2-1);
+  border-top-right-radius: var(--scale-2-1);
+}
+
+.workspace-tab-container-before.is-before-active,
+.workspace-tab-container-after.is-after-active,
+.workspace-tab-header.is-before-active,
+.workspace-tab-header.is-after-active {
+  background: transparent;
+}
+
+.workspace-tab-container-after .workspace-tab-header-inner,
+.workspace-tab-container-after.is-after-active .workspace-tab-header-inner,
+.workspace-tab-container-before.is-before-active .workspace-tab-header-inner,
+.workspace-tab-header.is-before-active .workspace-tab-header-inner,
+.workspace-tab-header.is-after-active,
+.workspace-tab-header.is-after-active .workspace-tab-header-inner,
+.workspace-tab-header.is-before-active,
+.workspace-tab-header.is-after-active {
+  background: transparent;
+}
+
+/*─────────Tab Header Icon Sizing──────────*/
+
+body .workspace-tab-header .workspace-tab-header-inner-icon svg {
+  height: var(--scale-8-2);
+  width: var(--scale-8-2);
+}
+
+/*─────────Tab Header Colors──────────*/
+
+.workspace-tab-header.is-active {
+  color: var(--color-white);
+}
+
+.workspace-tab-header:hover .workspace-tab-header-inner-icon svg {
+  color: var(--color-cyan-500);
+}
+
+.workspace-tab-header:active .workspace-tab-header-inner-icon svg {
+  color: var(--color-gray-30);
+}
+
+/*────────────────────────────────────
+            Nav Header
+────────────────────────────────────*/
+
+/*─────────Nav Header Container──────────*/
+
+.workspace-split.mod-left-split .nav-header,
+.workspace-split.mod-right-split .nav-header {
+  padding: var(--scale-2-4) var(--scale-2-4) var(--scale-2-4) var(--scale-2-4);
+  margin: var(--scale-0-0) var(--scale-0-0) var(--scale-0-0) var(--scale-0-0);
+}
+
+.workspace-split.mod-left-split .nav-buttons-container,
+.workspace-split.mod-right-split .nav-buttons-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+/*─────────Nav Header Buttons──────────*/
+
+.nav-action-button {
+  background: none;
+  height: var(--scale-2-18);
+  padding: var(--scale-2-4) var(--scale-2-4) var(--scale-2-4) var(--scale-2-4);
+  margin: var(--scale-0-0) var(--scale-2-2) var(--scale-0-0) var(--scale-2-2);
+  border-radius: var(--scale-2-4);
+  opacity: 1;
+}
+
+/*─────────Nav Header Icon Sizing──────────*/
+
+body .nav-action-button svg {
+  height: var(--scale-8-2);
+  width: var(--scale-8-2);
+}
+
+/*─────────Nav Header Buttons Color──────────*/
+
+.nav-action-button {
+  color: var(--color-gray-60);
+  border: 1px solid transparent;
+}
+
+.nav-action-button.is-active,
+.nav-action-button.is-active:hover {
+  color: var(--color-cyan-500);
+  background-color: var(--color-gray-90);
+  border: 1px solid var(--color-cyan-500);
+  border-radius: var(--scale-2-1);
+}
+
+.nav-action-button:not(.nav-action-button.is-active):hover {
+  /* color: var(--color-gray-20); */
+  color: var(--color-cyan-500);
+  background-color: var(--color-gray-90);
+  border: 1px solid var(--color-cyan-500);
+  border-radius: var(--scale-2-1);
+}
+
+.nav-action-button:not(.nav-action-button.is-active):active {
+  color: var(--color-gray-60);
+  background-color: var(--color-blacker);
+  border: 1px solid var(--color-gray-60);
+  border-radius: var(--scale-2-1);
+}
+
+/*────────────────────────────────────
+            Tab Content
+────────────────────────────────────*/
+
+/*─────────Tab Content Margin & Border Fix──────────*/
+
+.workspace-split.mod-left-split .workspace-tabs .workspace-leaf {
+  margin-left: var(--scale-2-3);
+  margin-right: var(--scale-2-3);
+  border-radius: var(--scale-2-1);
+}
+
+.workspace-split.mod-right-split .workspace-tabs .workspace-leaf {
+  margin-left: var(--scale-2-3);
+  margin-right: var(--scale-2-3);
+  border-radius: var(--scale-2-1);
+}
+
+.workspace-tabs {
+  padding-right: 0px;
+}
+
+/*─────────Vault Title──────────*/
+
+.nav-folder.mod-root > .nav-folder-title {
+  font-size: var(--font-scale-0);
+  font-family: var(--font-code);
+  background: var(--background-secondary);
+  top: 0;
+  width: 100%;
+  position: sticky;
+  justify-content: center;
+  padding: var(--scale-2-2) var(--scale-2-2) var(--scale-2-2) var(--scale-2-2);
+  border-radius: 0;
+  border-top: 1px solid var(--color-gray-90);
+  border-bottom: 1px solid var(--color-gray-90);
+  margin-bottom: var(--scale-2-4);
+  z-index: 2;
+}
+
+.nav-folder.mod-root > .nav-folder-title:hover {
+  color: var(--color-white) !important;
+  background: var(--background-secondary) !important;
+  cursor: default;
+}
+
+/*─────────Starred Files──────────*/
+
+.item-list {
+  flex-grow: 1;
+  padding-bottom: 20px;
+  overflow-y: auto;
+}
+
+/*─────────View Content──────────*/
+
+.workspace-split.mod-left-split .view-content,
+.workspace-split.mod-right-split .view-content {
+  height: 100%;
+  overflow: auto;
+  padding: var(--scale-2-4) var(--scale-0-0) var(--scale-2-4) var(--scale-0-0);
+}
+
+/*─────────Container for Outgoing Links and Backlinks Tab──────────*/
+
+.node-insert-event {
+  padding: var(--scale-0-0) var(--scale-0-0) var(--scale-8-4) var(--scale-0-0);
+}
+
+.outgoing-link-item {
+  margin: var(--scale-0-0) var(--scale-0-0) var(--scale-0-0) var(--scale-8-2);
+}
+
+.backlink-pane .search-result-container {
+  margin-left: var(--scale-8-2);
+}
+
+/* Outgoing Links and Backlinks Tab Colors */
+.outgoing-link-item {
+  border-left: 1px solid var(--background-modifier-border);
+}
+
+.tree-item-self:hover .tree-item-inner-subtext {
+  color: var(--color-gray-20);
+}
+
+.backlink-pane .search-result-container {
+  border-left: 1px solid var(--background-modifier-border);
+}
+
+/*─────────Tags Tab──────────*/
+
+.tag-container {
+  font-size: var(--font-scale-0);
+  padding: var(--scale-0-0) var(--scale-0-0) var(--scale-0-0) var(--scale-0-0);
+  overflow: auto;
+}
+
+/*─────────Outline Tab──────────*/
+
+.outline {
+  font-size: var(--font-scale-0);
+}
+
+/*─────────Search Results Container──────────*/
+
+.search-result-container {
+  padding: var(--scale-0-0) var(--scale-0-0) var(--scale-0-0) var(--scale-0-0);
+}
+
+.search-results-children {
+  padding: var(--scale-0-0) var(--scale-0-0) var(--scale-0-0) var(--scale-0-0);
+}
+
+.search-result-file-match {
+  margin: var(--scale-0-0) var(--scale-0-0) var(--scale-0-0) var(--scale-2-3);
+}
+
+.search-result-file-matches {
+  padding: var(--scale-0-0) var(--scale-0-0) var(--scale-0-0) var(--scale-0-0);
+  margin: var(--scale-2-2) var(--scale-0-0) var(--scale-2-2) var(--scale-0-0);
+}
+
+.search-result-file-match {
+  border-radius: 0;
+}
+
+.search-result-file-match::after {
+  padding: 0;
+}
+
+.search-result:last-child .search-result-file-matches {
+  margin-bottom: var(--scale-2-2);
+}
+
+.tree-item.search-result {
+  margin: 0;
+}
+
+.search-result-hover-button {
+  border-radius: var(--scale-2-1);
+}
+
+/* Search Results Container Colors */
+
+.search-result-file-match:hover {
+  color: var(--color-white);
+  background: var(--color-gray-80);
+}
+
+/*─────────Tree Items for Tabs──────────*/
+
+.tree-item-self {
+  font-size: var(--font-scale-0);
+  line-height: calc(var(--line-height) - 0.3rem);
+  border-radius: var(--scale-2-1);
+  padding: var(--scale-2-1) var(--scale-0-0) var(--scale-0-0) calc(1px + var(--scale-2-5));
+}
+
+.tree-item-flair {
+  font-size: var(--font-scale-000);
+  font-variant-numeric: tabular-nums;
+  font-family: var(--font-code);
+  padding: var(--scale-2-1) var(--scale-2-2) var(--scale-0-0) var(--scale-2-2);
+  margin-right: var(--scale-2-3);
+  border-radius: var(--scale-2-1);
+  vertical-align: -1px;
+}
+
+.tree-item-self .tree-item-icon {
+  align-self: initial;
+  padding-left: var(--scale-2-8);
+}
+
+.tree-item-children {
+  margin-left: var(--scale-8-2);
+}
+
+/*~ Tree Items for Tabs Colors ~*/
+
+.tree-item-self {
+  color: var(--color-gray-40);
+  background: transparent;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid transparent;
+}
+
+.tree-item-self.is-clickable:hover {
+  color: var(--color-cyan-500);
+  background: var(--color-gray-90);
+  border: 1px solid var(--color-cyan-500);
+}
+
+.tree-item-self.is-clickable:hover .tree-item-icon {
+  color: var(--color-cyan-500);
+}
+
+.tree-item-self.is-clickable:active {
+  color: var(--color-gray-50);
+  background: var(--color-blacker);
+  border: 1px solid var(--color-gray-50);
+}
+
+.tree-item-self.is-clickable:active .tree-item-icon {
+  color: var(--color-gray-50);
+}
+
+.tree-item-self.is-clickable .tree-item-flair {
+  color: var(--color-gray-40);
+  background: var(--color-black);
+}
+
+.tree-item-self.is-clickable:hover .tree-item-flair {
+  color: var(--color-white);
+  background: var(--color-gray-100);
+}
+
+/* Tree Items Relationship Lines
+    except Graph View */
+div.search-result-container .tree-item-self:not(.search-result-file-title.tree-item-self),
+.tree-item-children .tag-pane-tag,
+.view-content .outline .tree-item-children {
+  border-left: 1px solid var(--background-modifier-border);
+}
+
+div.search-result-container .tree-item-self:not(graph-controls .tree-item-children):hover {
+  border-left: 1px solid var(--color-cyan-500);
+}
+
+/*────────────────────────────────────
+            File Explorer
+────────────────────────────────────*/
+
+.nav-file-title,
+.nav-folder-title,
+.nav-vault-title,
+.nav-folder-title {
+  border-radius: var(--scale-0-0);
+}
+
+.nav-folder-title {
+  color: var(--color-gray-10);
+  font-weight: var(--font-medium);
+  padding: var(--scale-0-0) var(--scale-0-0) var(--scale-0-0) var(--scale-8-3);
+}
+
+.nav-file-title {
+  padding: var(--scale-0-0) var(--scale-0-0) var(--scale-0-0) var(--scale-2-4);
+  transition: padding var(--duration-fast-2) var(--motion-smooth);
+}
+
+.nav-file-title,
+.nav-folder-title {
+  width: auto;
+  text-overflow: unset;
+  white-space: normal;
+  border-radius: var(--scale-2-1);
+}
+
+/*──────────Style Setting File Explorer Wrapping──────────*/
+.file-explorer-unwrap .nav-file-title,
+.file-explorer-unwrap .nav-folder-title {
+  white-space: nowrap;
+}
+
+.nav-file-title-content,
+.nav-folder-title-content {
+  line-height: calc(var(--line-height) - 0.5rem);
+}
+
+.nav-folder-children .nav-folder-children {
+  padding-left: 0;
+  margin-left: var(--scale-8-2);
+}
+
+.pane-empty,
+.search-empty-state {
+  font-size: var(--font-scale-0);
+}
+
+/* Searches in File Explorer */
+
+.tree-item-self.search-result-file-title .tree-item-flair {
+  font-weight: var(--font-regular);
+}
+
+/*──────────Style Setting Search Tab Wrapping──────────*/
+.search-explorer-unwrap .search-result-file-title {
+  white-space: nowrap;
+}
+
+/*─────────File Explorer Colors──────────*/
+
+/* File and Folder Relationship Lines for File Explorer */
+.nav-folder-children .nav-folder-children {
+  border-left: 1px solid var(--background-modifier-border);
+}
+
+.nav-folder-title,
+.nav-file-title {
+  border: 1px solid transparent;
+}
+
+.nav-folder-title:hover,
+.nav-file-title:hover {
+  color: var(--color-cyan-500) !important;
+  background: var(--color-gray-90) !important;
+  border: 1px solid var(--color-cyan-500) !important;
+}
+
+.nav-folder-title:hover .nav-folder-collapse-indicator.collapse-icon {
+  color: var(--color-cyan-500) !important;
+}
+
+/* don't remove !important */
+.nav-folder-title:active,
+.nav-file-title:active {
+  color: var(--color-gray-70) !important;
+  background: var(--color-blacker) !important;
+  border: 1px solid var(--color-gray-70) !important;
+}
+
+.nav-folder-title:active .nav-folder-collapse-indicator.collapse-icon {
+  color: var(--color-gray-70) !important;
+}
+
+.nav-file-title.is-active {
+  color: var(--color-cyan-500);
+  font-weight: var(--font-medium);
+  background: var(--color-gray-90);
+  border: 1px solid var(--color-cyan-500);
+}
+
+/* Searches in File Explorer Colors */
+
+.search-result-file-matched-text {
+  color: var(--color-highlight-text);
+  background: var(--color-highlight-gradient);
+  filter: drop-shadow(var(--color-highlight-shadow));
+  border-radius: var(--scale-2-1);
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+/*────────────────────────────────────
+            Status Bar
+────────────────────────────────────*/
+
+.status-bar {
+  max-height: unset;
+  min-width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: auto;
+  bottom: 0;
+  padding: var(--scale-2-1) var(--scale-2-4) var(--scale-0-0) var(--scale-2-4);
+}
+
+.status-bar-item {
+  font-family: var(--default-font);
+  font-variant-numeric: tabular-nums;
+  padding: var(--scale-0-0) var(--scale-2-4) var(--scale-0-0) var(--scale-2-4);
+}
+
+.status-bar-item:last-child {
+  padding-right: 0;
+}
+
+.status-bar-item-icon {
+  vertical-align: initial;
+}
+
+/*─────────Status Bar Colors──────────*/
+
+.status-bar {
+  color: var(--color-gray-70);
+  background-color: var(--color-black);
+  border: 1px solid var(--color-d-gray-50);
+}
+
+.status-bar-item {
+  color: var(--color-gray-40);
+}
+
+.status-bar-item.mod-clickable:hover,
+.status-bar-item:hover {
+  color: var(--color-gray-20);
+}
+
+/* Sync Icons for Status Bar ~*/
+
+.sync-status-icon.mod-working svg {
+  color: var(--color-gray-40);
+  height: var(--scale-8-2);
+  width: var(--scale-8-2);
+}
+
+.sync-status-icon.mod-working:hover svg {
+  color: var(--color-magenta-900);
+  height: var(--scale-8-2);
+  width: var(--scale-8-2);
+}
+
+.sync-status-icon.mod-success svg {
+  color: var(--color-gray-40);
+  height: var(--scale-8-2);
+  width: var(--scale-8-2);
+}
+
+.sync-status-icon.mod-success:hover svg {
+  color: var(--color-green-920);
+}
